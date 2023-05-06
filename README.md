@@ -1,7 +1,8 @@
-# pyqt-openai
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/55078043/229002952-9afe57de-b0b6-400f-9628-b8e0044d3f7b.png">
-</p>
+# pyqt-openai-assistant
+
+Fork from Gyu Yoon repo <a href="https://github.com/yjg30737/pyqt-openai">pyqt-openai</a>
+
+## work in progress
 
 Example of using OpenAI with PyQt (Python cross-platform GUI toolkit)
 
@@ -29,22 +30,16 @@ You can join pyqt-openai's <a href="https://discord.gg/cHekprskVE">Discord Serve
 ## Note
 Some of the features are still being tested.
 
-I recommend to install sqlite management software. It's not necessary to run this app (obviously), but it's good practice to manage database about conversation history with AI and to know how this works.
-
 ## Feature
 * basically this is <b>desktop application version of ChatGPT</b>
   * text streaming (enable by default, you can disable it)
   * AI remembers past conversation
-* conversation management
-  * add & delete conversations
-  * save conversations
-  * rename conversation
-  * everything above is saved in an SQLite database file named conv.db.
-* support GPT-4 and every other models below GPT3
+* support GPT-4
+* you can save the conversation history with sqlite database
 * support prompt generator
 * support image generation with DALL-E
+* you can test any models, including gpt3.5
 * you can run this in background application
-  * notification will pop up when response is generated
 * you can make window stack on top or control its transparency
 
 ## Requirements
@@ -55,27 +50,13 @@ I recommend to install sqlite management software. It's not necessary to run thi
 ## Preview
 This is using GPT-3.5 turbo model by default.
 
-### Homepage
-![image](https://user-images.githubusercontent.com/55078043/236583808-f43403f7-2b8f-483b-9271-b78ab8a1eb73.png)
-<b>You have to write your openai api key inside the red box.</b> see [How to play](#how-to-play)
 
-### Overview
-![image](https://user-images.githubusercontent.com/55078043/236584269-99c76ea5-4cec-44f7-8283-e502a182264d.png)
-
-### Conversation preview
-#### Preview Image
-![image](https://user-images.githubusercontent.com/55078043/236583716-a18b30b0-7b67-412e-b633-7daa8e41b525.png)
-#### Preview Video
-https://user-images.githubusercontent.com/55078043/236583883-8e9732a3-1223-4b28-85f1-f60d8b2d6ced.mp4
-
-### Prompt Generator
-https://user-images.githubusercontent.com/55078043/236584481-b7bb5246-6bf4-4343-ba6c-a343bb11cda7.mp4
 
 So sorry to weak preview, but i have a lot of idea about this prompt generator! Just wait. 
 
 ## How to play
 1. git clone ~
-2. from the root directory, type "cd pyqt_openai"
+2. from the repo root directory,
 3. You should put your api key in the line edit. You can get it in <a href="https://platform.openai.com/account/api-keys">official site</a> of openai. Sign up and log in before you get it. <b>By the way, this is free trial, not permanently free. See <a href="https://platform.openai.com/account/billing/overview">this</a> after you have logged in.</b>
 
 Be sure, this is a very important API key that belongs to you only, so you should remember it and keep it secure.
