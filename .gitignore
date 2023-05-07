@@ -134,3 +134,4 @@ conv_history.json
 conv.db
 a.py
 test/
+pyqt_openai.ini
