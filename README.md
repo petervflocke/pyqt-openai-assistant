@@ -48,7 +48,7 @@ Some of the features are still being tested.
 * openai
 
 ## Preview
-This is using GPT-3.5 turbo model by default.
+This is using GPT-3.5 turbo model by default. 
 
 
 
