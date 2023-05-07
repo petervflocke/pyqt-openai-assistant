@@ -427,7 +427,7 @@ class OpenAIChatBot(QMainWindow):
         openai_arg = ''
         if is_img:
             openai_arg = {
-                "prompt": self.__lineEdit.toPlainText(),
+                "prompt": self.__prompt.getContent(),
                 "n": info_dict['n'],
                 "size": f"{info_dict['width']}x{info_dict['height']}"
             }
@@ -446,7 +446,7 @@ class OpenAIChatBot(QMainWindow):
                     'messages': [
                         {"role": "system", "content": info_dict['system']},
                         {"role": "assistant", "content": self.__browser.getAllText()},
-                        {"role": "user", "content": self.__lineEdit.toPlainText()},
+                        {"role": "user", "content": self.__prompt.getContent()},
                     ],
                     # 'temperature': info_dict['temperature'],
 
@@ -471,7 +471,7 @@ class OpenAIChatBot(QMainWindow):
         self.__lineEdit.setEnabled(False)
         self.__leftSideBarWidget.setEnabled(False)
 
-        self.__browser.showLabel(self.__lineEdit.toPlainText(), True, False, False)
+        self.__browser.showLabel(self.__prompt.getContent(), True, False, False)
 
         self.__t = OpenAIThread(info_dict['engine'], openai_arg, is_img, self.__remember_past_conv)
         self.__t.replyGenerated.connect(self.__browser.showLabel)
